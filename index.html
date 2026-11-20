@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#e98590">
+    <title>Práctica de Local Storage</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="encabezado">
+        <p class="etiqueta">PRÁCTICA INTERACTIVA</p>
+        <h1>Local Storage</h1>
+        <p class="subtitulo">Guarda y administra directamente en este navegador.</p>
+    </header>
+
+    <main class="ejercicios">
+        <section>
+            <h2><span class="numero">01</span> Guardar un nombre</h2>
+            <form>
+                <label for="nombreGuardar">Nombre</label>
+                <input type="text" id="nombreGuardar" placeholder="Escribe un nombre">
+                <button type="button" onclick="guardarNombre()">Guardar nombre</button>
+            </form>
+            <p id="resultadoGuardar" class="resultado" aria-live="polite"></p>
+        </section>
+
+        <section>
+            <h2><span class="numero">02</span> Mostrar nombres</h2>
+            <form>
+                <button type="button" onclick="mostrarNombre()">Mostrar nombres guardados</button>
+            </form>
+            <ul id="resultadoMostrar" class="resultado lista" aria-live="polite"></ul>
+        </section>
+
+        <section>
+            <h2><span class="numero">03</span> Editar un nombre</h2>
+            <label for="posicionEditar">Posición del nombre</label>
+            <input type="number" id="posicionEditar" min="0" placeholder="Ej. 0">
+            <label for="nuevoNombre">Nuevo nombre</label>
+            <input type="text" id="nuevoNombre" placeholder="Escribe el nuevo nombre">
+            <button type="button" onclick="editarNombre()">Editar nombre</button>
+            <p id="resultadoEditar" class="resultado" aria-live="polite"></p>
+        </section>
+
+        <section>
+            <h2><span class="numero">04</span> Eliminar nombres</h2>
+            <p class="descripcion">Borra todos los nombres guardados en este navegador.</p>
+            <button class="boton-peligro" type="button" onclick="eliminarNombre()">Eliminar todos los nombres</button>
+            <p id="resultadoEliminar" class="resultado" aria-live="polite"></p>
+        </section>
+
+        <section class="tarjeta-mascota">
+            <h2><span class="numero">05</span> Guardar una mascota</h2>
+            <form>
+                <label for="mascota">Nombre de la mascota</label>
+                <input type="text" id="mascota" placeholder="Ej. Luna">
+
+                <label for="raza">Raza</label>
+                <input type="text" id="raza" placeholder="Ej. Labrador">
+
+                <label for="edad">Edad</label>
+                <input type="number" id="edad" min="0" max="16" placeholder="Edad en años">
+
+                <button type="button" onclick="guardarMascota()">Guardar mascota</button>
+            </form>
+            <p id="resultadoMascota" class="resultado" aria-live="polite"></p>
+        </section>
+    </main>
+    
+    <script src="apps.js"></script>
+</body>
+</html>
